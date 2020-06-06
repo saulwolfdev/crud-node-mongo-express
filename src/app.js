@@ -7,11 +7,12 @@ const app =express();
 
 const usersRoutes=require("./routes/users");
 
+//CONNECTION
 mongoose.Promise=global.Promise;
 mongoose.connect("mongodb://localhost/rest-api",
 {useMongoClient:true})
 .then(db=>console.log("database is connected"))
-.catch(err=>console.log(err))
+.catch(err=>console.log(err));
 
 //SETTINGS
 app.set("port",process.env.PORT||3001);
