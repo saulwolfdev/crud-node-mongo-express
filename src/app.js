@@ -13,7 +13,7 @@ mongoose.connect("mongodb://localhost/rest-api",
 .then(db=>console.log("database is connected"))
 .catch(err=>console.log(err))
 
-//SETTINGS
+//SETTINGS 
 app.set("port",process.env.PORT||3001);
 
 //MIDDLEWARES
